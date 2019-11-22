@@ -1,23 +1,16 @@
 <ion-header>
   <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Page Two</ion-title>
+    <ion-title>Vergonhas da Pofission - 2/3</ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content>
-  <ion-list>
-    <button ion-item *ngFor="let item of items" (click)="itemTapped($event, item)">
-      <ion-icon [name]="item.icon" item-start></ion-icon>
-      {{item.title}}
-      <div class="item-note" item-end>
-        {{item.note}}
-      </div>
-    </button>
-  </ion-list>
-  <div *ngIf="selectedItem" padding>
-    You navigated here from <b>{{selectedItem.title}}</b>
-  </div>
+<ion-content padding>
+  <ion-item>
+    <ion-label fixed>Username</ion-label>
+    <ion-input type="text" [(ngModel)]="username" id="editText" >{{ username }}</ion-input>
+  </ion-item>
+
+  <button ion-button (click)="clickConfirm()" id ="btnConfirmar">Confirmar</button>
+
+  <button ion-button (click)="clickCancel()" id ="btnCancelar">Cancelar</button>
 </ion-content>
