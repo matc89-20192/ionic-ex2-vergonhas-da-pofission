@@ -18,7 +18,6 @@ export class Page2 {
   }
 
   clickConfirm() {
-    this.username = this.username ? this.username : "";
     this.callback(this.username);
     this.navCtrl.pop();
   }
